@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build and Push Docker Image') {
             steps {
-                sh 'cat password.txt | docker login -u beyghakymyar --password-stdin'
+                sh 'cat pwd.txt | docker login -u beyghakymyar --password-stdin'
 
                 sh 'docker-compose build'
                 sh 'docker-compose push'
