@@ -14,5 +14,11 @@ pipeline {
                 sh 'docker-compose push'
             }
         }
+        stage('Deploy on AWS ECR') {
+            steps {
+                sh 'kubectl apply -f deploy.yaml'
+                sh 'kubectl get all'
+            }
+        }
     }
 }
