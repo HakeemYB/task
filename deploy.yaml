@@ -34,11 +34,11 @@ spec:
   selector:
     app: react-node-app
   ports:
-    - protocol: TCP
+    - protocol: http
       port: 3000
       targetPort: 3000
       nodePort: 30060
-    - protocol: TCP
+    - protocol: api
       port: 8000
       targetPort: 8000
       nodePort: 30061
